@@ -1,0 +1,37 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+
+
+.container {
+  @include outer-container;
+}
+
+.vid-wrap {
+  position: relative;
+  background-color: rgba(0,0,0,1);
+  @include background-image(linear-gradient(rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), url("/img/home-bg.jpg"));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  background-attachment: fixed;
+  height: 100vh;
+  margin-top: -140px;
+  .services {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(105, 162, 188, .8);
+    color: #ffffff;
+    padding: 2rem;
+    box-shadow: 0 0 4px rgba(0,0,0,.5);
+
+    &__title {
+      margin: 0 0 0.5em 0;
+    }
+
+    &__service {
+      margin: 0 0 0.5em 0;
+      padding-bottom: 0.5em;
+      border-bottom: 1px solid rgba(255,255,255,0.5);
+    }
+  }
+}

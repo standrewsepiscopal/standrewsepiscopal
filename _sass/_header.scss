@@ -1,0 +1,60 @@
+header {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  padding-bottom: 1rem;
+
+  .info-bar {
+    background-color: #333;
+    color: white;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 1rem;
+
+    span {
+      font-size: 0.875em;
+      margin-right: 1em;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
+
+    &__hours {
+      margin-right: 0 !important;
+      float: right;
+    }
+
+  }
+
+  .logo {
+    width: 250px;
+    display: inline-block;
+  }
+
+  .main-menu {
+    display: inline-block;
+    float: right;
+    margin-top: 1.25em;
+
+    &__item {
+      color: inherit;
+      text-decoration: none;
+      font-size: 1.25em;
+      margin-right: 1.5rem;
+      &--giving {
+        background-color: rgba(105, 162, 188, 1);
+        color: #ffffff;
+        padding: 0.5em 0.75em;
+        border-radius: 40px;
+      }
+      &--icon {
+        color: rgba(105, 162, 188, 1);
+        font-size: 2em;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
