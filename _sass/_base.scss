@@ -1,13 +1,14 @@
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700,900,800);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,900,800);
 
 body {
   -webkit-font-smoothing: antialiased;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .container {
   @include outer-container;
+  @include pad(0 10px);
 }
 
 .vid-wrap {
@@ -18,16 +19,18 @@ body {
   background-size: cover;
   background-position: center top;
   height: 79vh;
-  margin-top: -140px;
+  // margin-top: -140px;
   @include align-items(center);
   @include display(flex);
   @include flex-direction(row);
   @include justify-content(center);
   h1 {
     color: #ffffff;
-    font-size: 60px;
+    font-size: 72px;
+    line-height: 1.1em;
+    text-transform: uppercase;
     text-align: center;
-    font-weight: 900;
+    font-weight: 800;
   }
   .services {
     position: absolute;
@@ -47,6 +50,27 @@ body {
       margin: 0 0 0.5em 0;
       padding-bottom: 0.5em;
       border-bottom: 1px solid rgba(255,255,255,0.5);
+      .time {
+        font-size: 1.5em;
+        font-weight: 300;
+      }
     }
   }
+}
+
+section.front-mid {
+  .container {
+    padding: 0;
+  }
+}
+
+.welcome {
+  @include span-columns(6 of 12, block-collapse);
+  @include pad(1em);
+}
+
+.latest-podcast {
+  @include span-columns(6 of 12, block-collapse);
+  @include pad(1em);
+  background-color: lighten(#333333, 75%);
 }
