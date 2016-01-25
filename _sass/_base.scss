@@ -69,7 +69,7 @@ section.front-mid {
   @include pad(1em);
 }
 
-.latest-podcast {
+.home-blog {
   @include span-columns(6 of 12, block-collapse);
   @include pad(1em);
   background-color: lighten(#333333, 75%);

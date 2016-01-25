@@ -20,8 +20,56 @@ layout: default
       <p class="welcome__description">Beard literally health goth, swag offal try-hard authentic commodo eiusmod officia consectetur migas raw denim blue bottle. Meh chicharrones shabby chic, ad ennui tousled raw denim. Vinyl cliche farm-to-table, letterpress helvetica aute messenger bag normcore typewriter. Everyday carry aesthetic kickstarter gastropub.</p>
     </div>
 
-    <div class="latest-podcast">
-        <h2 class="latest-podcast__title">Latest Sermon</h2>
+    <div class="home-blog">
+      <h2 class="home-blog__title">From the blog</h2>
+
+      <div class="home-blog__post">
+        <h3><a href="#">Looking Ahead</a></h3>
+        <p class='author'>John Keener</p>
+        <p class="teaser">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua... <a href="#">Read More</a></p>
+      </div>
+
+      <a href="#" class="home-blog__blog-link">More from the blog</a>
     </div>
   </div>
 </section>
+
+<section class="home-cal">
+  <div class="container">
+
+    <h2 class="home-cal__title">This week at St. Andrew's</h2>
+    <div class="home-cal__calendar"></div>
+
+    <script type='text/javascript'>
+
+    $(document).ready(function() {
+        $('.home-cal__calendar').fullCalendar({
+          googleCalendarApiKey: '<YOUR API KEY>',
+          events: {
+              googleCalendarId: 'abcd1234@group.calendar.google.com'
+          },
+          defaultView: 'basicWeek'
+        });
+    });
+
+    </script>
+  </div>
+</section>
+
+<div class="home-instagram">
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.home-instagram').on('willLoadInstagram', function(event, options) {
+      console.log(options);
+    });
+    $('.home-instagram').on('didLoadInstagram', function(event, response) {
+      console.log(response);
+    });
+    $('.home-instagram').instagram({
+      hash: 'hipster',
+      clientId: 'c477c2d07bec451cbe743cba12820146'
+    });
+  });
+</script>
+</div>
