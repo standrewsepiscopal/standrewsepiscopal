@@ -58,18 +58,30 @@ layout: default
 </section>
 
 <div class="home-instagram">
+  <div class="container">
+    <h2>Follow us on Instagram! <i class="fa fa-instagram"></i></h2>
+  </div>
+  <div id="instafeed"></div>
 <script type="text/javascript">
-  $(document).ready(function() {
-    $('.home-instagram').on('willLoadInstagram', function(event, options) {
-      console.log(options);
-    });
-    $('.home-instagram').on('didLoadInstagram', function(event, response) {
-      console.log(response);
-    });
-    $('.home-instagram').instagram({
-      hash: 'hipster',
-      clientId: 'c477c2d07bec451cbe743cba12820146'
-    });
+  // $(document).ready(function() {
+  //   $('.home-instagram').on('willLoadInstagram', function(event, options) {
+  //     console.log(options);
+  //   });
+  //   $('.home-instagram').on('didLoadInstagram', function(event, response) {
+  //     console.log(response);
+  //   });
+  //   $('.home-instagram').instagram({
+  //     hash: 'hipster',
+  //     clientId: 'c477c2d07bec451cbe743cba12820146'
+  //   });
+  // });
+  var feed = new Instafeed({
+      get: 'user',
+      userId: '1005536492',
+      accessToken: '1005536492.06d66a2.e935a8d961fe43bfa959c986ac0522bd',
+      limit: 10,
+      resolution: 'standard_resolution'
   });
+  feed.run();
 </script>
 </div>
